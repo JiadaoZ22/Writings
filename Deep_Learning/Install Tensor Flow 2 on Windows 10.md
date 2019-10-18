@@ -1,4 +1,4 @@
-# Install Tensor Flow 2 on Windows 10
+# Install Tensor Flow 2.0.0 on Windows 10
 
 ## Download and Install Anaconda
 
@@ -33,7 +33,7 @@
 
 > - open a cmd console in `anaconda navigator`
 >
-> - ```
+> - ```python
 >   from __future__ import absolute_import, division, print_function, unicode_literals
 >   
 >   import tensorflow as tf

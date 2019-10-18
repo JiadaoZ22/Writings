@@ -14,7 +14,7 @@
 - 4 left imgs make the support set. Img in right bottom is a test example. They combined as a task.
 
 - `Prediction = f(support_set, tets_example)`, $P(\hat{y} | \hat{x}, S)$,  $S=(x_i,y_i)^k_{i=1}$,  $k$ is the number of support examples.
-  - In this case, the model is $\hat{y}=\sum\limits^k_{i=1}a(\hat x, x_i)y_i$, where $\hat y$ is the linear combination of smaples from support set's labels. The weights are the relationship between the test example and support set.
+  - In this case, the model is $\hat{y}=\sum\limits^k_{i=1}a(\hat x, x_i)y_i$, where $\hat y$ is the linear combination of samples from support set's labels. The weights are the relationship between the test example and support set.
 
 ## Attention Kernel
 

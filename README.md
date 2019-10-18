@@ -1,4 +1,4 @@
-# Math Cheet Sheet
+# Math Cheat Sheet
 
 ### Loss
 
