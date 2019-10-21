@@ -1,3 +1,7 @@
+---
+typora-copy-images-to: ..\Imgs
+---
+
 # Install Tensor Flow 2.0.0 on Windows 10
 
 ## Download and Install Anaconda
