@@ -28,6 +28,7 @@
 
 > - search for `Environment Variables`, `edit` -> `path` in the `system vaiables` 
 > - ![https://user-images.githubusercontent.com/4515120/52910032-06803880-32d5-11e9-87f2-a4a7627d0c30.png](https://user-images.githubusercontent.com/4515120/52910032-06803880-32d5-11e9-87f2-a4a7627d0c30.png)
+> - ![1571683261578](C:\Users\jiada\AppData\Roaming\Typora\typora-user-images\1571683261578.png)
 
 ## Test It
 
@@ -35,10 +36,12 @@
 >
 > - ```python
 >   from __future__ import absolute_import, division, print_function, unicode_literals
->   
->   import tensorflow as tf
->   print("GPU Available: ", tf.test.is_gpu_available())
 >   ```
 >
+> import tensorflow as tf
+> print("GPU Available: ", tf.test.is_gpu_available())
+> ```
+> 
 > - All set, if return `True`
+> ```
 
