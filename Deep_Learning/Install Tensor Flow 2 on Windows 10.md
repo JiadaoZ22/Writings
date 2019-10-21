@@ -27,8 +27,10 @@
 ## Set the Environment Variables
 
 > - search for `Environment Variables`, `edit` -> `path` in the `system vaiables` 
+>
 > - ![https://user-images.githubusercontent.com/4515120/52910032-06803880-32d5-11e9-87f2-a4a7627d0c30.png](https://user-images.githubusercontent.com/4515120/52910032-06803880-32d5-11e9-87f2-a4a7627d0c30.png)
-> - ![1571683261578](C:\Users\jiada\AppData\Roaming\Typora\typora-user-images\1571683261578.png)
+>
+>   ![](C:\Users\jiada\Desktop\QQ截图20191021144716.png)
 
 ## Test It
 
