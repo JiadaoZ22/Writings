@@ -30,7 +30,7 @@
 >
 > - ![https://user-images.githubusercontent.com/4515120/52910032-06803880-32d5-11e9-87f2-a4a7627d0c30.png](https://user-images.githubusercontent.com/4515120/52910032-06803880-32d5-11e9-87f2-a4a7627d0c30.png)
 >
->   ![](C:\Users\jiada\Desktop\QQ截图20191021144716.png)
+>   ![1571683828966](D:\Github\Writings\Imgs\1571683828966.png)
 
 ## Test It
 
@@ -38,12 +38,9 @@
 >
 > - ```python
 >   from __future__ import absolute_import, division, print_function, unicode_literals
+>   import tensorflow as tf
+>   print("GPU Available: ", tf.test.is_gpu_available())
 >   ```
 >
-> import tensorflow as tf
-> print("GPU Available: ", tf.test.is_gpu_available())
-> ```
-> 
-> - All set, if return `True`
-> ```
+> -  All set, if return `True`
 
