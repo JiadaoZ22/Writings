@@ -34,7 +34,7 @@ typora-copy-images-to: ..\Imgs
 >
 > - ![https://user-images.githubusercontent.com/4515120/52910032-06803880-32d5-11e9-87f2-a4a7627d0c30.png](https://user-images.githubusercontent.com/4515120/52910032-06803880-32d5-11e9-87f2-a4a7627d0c30.png)
 >
->   ![1571683828966](D:\Github\Writings\Imgs\1571683828966.png)
+>   ![image-20191025103334754](../Imgs/image-20191025103334754.png)
 
 ## Test It
 
