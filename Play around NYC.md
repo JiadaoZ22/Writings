@@ -3,43 +3,32 @@
 ##  Upper Town Manhattan
 
 - Met (Half day)
-
   - Check the exhibitons, and visit interested ones first. Don't forget the top floor garden.
   - https://www.metmuseum.org/exhibitions/upcoming-exhibitions
-
 - Guggenheim
-
   - https://www.guggenheim.org/
-
 - Central Park (1~2 hrs)
-
   - Bethesda terrace, foutain
   - Snacks
-
 - 5th Avenue (From North to South)
-
 - Grand Central Terminal (0.5 hr)
-
   - Lady M (Brayant Park)
   - Blue Bottle Coffe
-
 - New York Public Libray
-
 - Time Square (1 hr)
-
   - 2 Bros Pizza
   - Shake Shack
 
-  ## Lower Town Manhattan
+## Lower Town Manhattan
 
-  - Wall Street
-  - Federal Hall
-  - Brooklyn Bridge (Sunset)
-  - Empire State Building
-    - http://www.esbnyc.com/
-  - Statue of Liberty 
-    - https://www.nps.gov/stli/planyourvisit/fees.htm
-    - Battery Park (take curiser)
+- Wall Street
+- Federal Hall
+- Brooklyn Bridge (Sunset)
+- Empire State Building
+  - http://www.esbnyc.com/
+- Statue of Liberty 
+  - https://www.nps.gov/stli/planyourvisit/fees.htm
+  - Battery Park (take curiser)
 
 ## Middle Town Manhattan
 
@@ -69,4 +58,3 @@
 - Escape Room
   - Room Enigma, Northern Boulevard, Flushing, NY
     - https://www.roomenigma.com/
-  - 
