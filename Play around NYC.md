@@ -28,7 +28,8 @@
   - http://www.esbnyc.com/
 - Statue of Liberty 
   - https://www.nps.gov/stli/planyourvisit/fees.htm
-  - Battery Park (take curiser)
+  - Battery Park 
+  - Staten Island Furry
 
 ## Middle Town Manhattan
 
