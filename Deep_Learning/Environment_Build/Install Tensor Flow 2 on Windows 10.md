@@ -28,7 +28,7 @@
 
 > - search for `Environment Variables`, `edit` -> `path` in the `system vaiables` 
 >
-> - ![https://user-images.githubusercontent.com/4515120/52910032-06803880-32d5-11e9-87f2-a4a7627d0c30.png](https://user-images.githubusercontent.com/4515120/52910032-06803880-32d5-11e9-87f2-a4a7627d0c30.png)
+>   ![https://user-images.githubusercontent.com/4515120/52910032-06803880-32d5-11e9-87f2-a4a7627d0c30.png](https://user-images.githubusercontent.com/4515120/52910032-06803880-32d5-11e9-87f2-a4a7627d0c30.png)
 >
 >   ![image-20191124164223550](Install%20Tensor%20Flow%202%20on%20Windows%2010.assets/image-20191124164223550.png)
 >
