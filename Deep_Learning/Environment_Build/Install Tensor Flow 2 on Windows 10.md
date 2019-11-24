@@ -1,7 +1,3 @@
----
-typora-copy-images-to: ..\Imgs
----
-
 # Install Tensor Flow 2.0.0 on Windows 10
 
 ## Download and Install Anaconda
@@ -34,16 +30,21 @@ typora-copy-images-to: ..\Imgs
 >
 > - ![https://user-images.githubusercontent.com/4515120/52910032-06803880-32d5-11e9-87f2-a4a7627d0c30.png](https://user-images.githubusercontent.com/4515120/52910032-06803880-32d5-11e9-87f2-a4a7627d0c30.png)
 >
->   ![image-20191025103434270](../Imgs/image-20191025103434270.png)
+>   ![image-20191124163844810](Install Tensor Flow 2 on Windows 10.assets/image-20191124163844810.png)
+>
+>   
+>
 
 ## Test It
 
 > - open a cmd console in `anaconda navigator`
 >
 > - ```python
->     from __future__ import absolute_import, division, print_function, unicode_literals
->     import tensorflow as tf
->     print("GPU Available: ", tf.test.is_gpu_available())
->     ```
+>  from __future__ import absolute_import, division, print_function, unicode_literals
+>  import tensorflow as tf
+>  print("GPU Available: ", tf.test.is_gpu_available())
+>  ```
+>  ```
 > -  All set, if return `True`
+>  ```
 
