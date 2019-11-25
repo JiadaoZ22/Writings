@@ -1,4 +1,4 @@
-# Deep Learning Note
+# Deep Learning Notebook
 
 ## Machine Learning
 
