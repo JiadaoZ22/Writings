@@ -76,8 +76,8 @@ Targets: 1. Feature Extraction, 2. Fine-Tune
 >  4. Fine-tuning
 >
 >      	1. Unfreeze the top layers of the model
->      	2. Compile the model
->      	3. Train the model
+>           	2. Compile the model
+>                	3. Train the model
 >          - If the validation loss is much higher than the training loss, be aware of the overfitting
 
 ## Semi-supervised Learning
@@ -89,6 +89,43 @@ https://zhuanlan.zhihu.com/p/34516078
 https://rinuboney.github.io/2016/01/19/ladder-network.html
 
 ## Bayesian Neural Network
+
+## Recurrent Neural Network
+
+### Basic RNN
+
+
+
+<img src="Deep%20Learning%20Note.assets/RNN-rolled.png" alt="img" style="zoom:25%;" />
+
+<img src="http://colah.github.io/posts/2015-08-Understanding-LSTMs/img/RNN-unrolled.png" alt="An unrolled recurrent neural network." style="zoom: 33%;" />
+
+
+
+### LSTM
+
+![img](Deep%20Learning%20Note.assets/6881df9f3b9d396d79da60920e1b04ac_hd.jpg)
+
+#### Bidirectional LSTMs
+
+> - duplicating the first recurrent layer in the network so that there are now 2 layers side-by-side, then providing the input sequence as-is as input to the first layer and providing a reversed copy of the input sequence
+>   - `The idea is to split the state neurons of a regular RNN in a part that  is responsible for the positive time direction (forward states) and a  part for the negative time direction (backward states)`
+> - The use of providing the sequence bi-directionally was initially  justified in the domain of speech recognition because there is evidence  that the context of the whole utterance is used to interpret what is  being said rather than a linear interpretation.
+>   - `… relying on knowledge of the future seems at first sight to violate  causality. How can we base our understanding of what we’ve heard on  something that hasn’t been said yet? However, human listeners do exactly that. Sounds, words, and even whole sentences that at first mean  nothing are found to make sense in the light of future context. What we  must remember is the distinction between tasks that are truly online –  requiring an output after every input – and those where outputs are only needed at the end of some input segment.`
+
+### Attention
+
+---
+
+## Applications
+
+### Handwriting System
+
+#### Bézier **Curve**
+
+> https://medium.com/@Acegikmo/the-ever-so-lovely-b%C3%A9zier-curve-eb27514da3bf
+
+
 
 
 
