@@ -6,6 +6,8 @@
 
 #### Data Augmentation
 
+##### CV
+
 > - Flipping 翻转
 > - Rotation 旋转
 > - Rescaling 缩放
@@ -13,6 +15,16 @@
 > - Shifting 平移
 > - Brightness/Contrast/Colorfulness 亮度/饱和度/对比度
 > - Gaussian Noise
+
+##### NLP
+
+> - Translate Back
+>   - Translating current language samples to another language then translate it back again
+> - Text Augmentation
+>   - Synonyms Replace
+>   - Randomly Inset
+>   - Randomly Swap
+>   - Randomly Delete
 
 ### Feature Engineering
 
