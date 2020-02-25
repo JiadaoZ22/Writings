@@ -2,7 +2,7 @@
 
 ### Loss
 
-```
+```latex
 \mathcal{L}
 ```
 
@@ -10,7 +10,7 @@ $\mathcal{L}$
 
 ### Vector
 
-```
+```latex
 \mathbf{F} = k\mathbf{x}
 ```
 
@@ -20,7 +20,7 @@ $$
 
 ### Math Align
 
-```
+```latex
 $$
 \begin{align*}
 
@@ -41,7 +41,7 @@ $$
 
 ### Parentheses Typing
 
-```
+```latex
  f(n) =
 \begin{cases}
 n/2,  & \text{if $n$ is even} \\
@@ -62,7 +62,7 @@ $$
 
 ### Limit Format
 
-```
+```latex
 \sum\limits_{i=1}^{n}
 ```
 
