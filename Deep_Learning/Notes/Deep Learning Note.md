@@ -2,6 +2,26 @@
 
 ## Machine Learning
 
+### Mathematics
+
+#### Convexity
+
+##### Smoothness
+
+>  a smooth function is **continuous and differentiable everywhere**.
+>
+> - Absolute function is continuous but not differentiable at $x=0$.
+
+##### Stableness
+
+> a stationary process is unconditional joint probability distribution (parameters) does not change when shifted in time.
+
+##### Harmonic Function
+
+> it is a twice continuously differentiable function $f:U\rightarrow \R$, where $U$ is an open subset of $\R$, that satisfy Laplace's equation:
+>
+> $$\sum_{i=1}^{d}{{\partial^2f}\over{\partial x_i^2}}=0$$
+
 ### Data Engineering
 
 #### Data Augmentation
