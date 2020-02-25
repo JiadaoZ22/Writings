@@ -18,9 +18,17 @@
 
 ##### Harmonic Function
 
-> it is a twice continuously differentiable function $f:U\rightarrow \R$, where $U$ is an open subset of $\R$, that satisfy Laplace's equation:
+> it is a twice continuously differentiable function $f:U\rightarrow \R$, where $U$ is an open subset of $\R$, that satisfy Laplace's equation everywhere on U:
 >
-> $$\sum_{i=1}^{d}{{\partial^2f}\over{\partial x_i^2}}=0$$
+> $$
+> \sum_{i=1}^{d}{{\partial^2f}\over{\partial x_i^2}}=0
+> $$
+> that is usually writes as
+> $$
+> \nabla^2f=0	\\
+> \text{or}	\\
+> \Delta f=0
+> $$
 
 ### Data Engineering
 
