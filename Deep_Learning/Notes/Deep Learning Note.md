@@ -30,6 +30,32 @@
 > \Delta f=0
 > $$
 
+### Models
+
+#### Discriminant & Generative
+
+> + Discriminant:
+>
+>   \+ don’t have to learn parameters which aren’t used (e.g. covariance)
+>
+>   \+ easy to learn 
+>
+>   \- no confidence measure
+>
+>   \- have to retrain if dimension of feature vectors changed
+>
+> - Generative:
+>
+>   +have confidence measure
+>
+>   \+ can use ‘reject option’
+>
+>   \+ easy to add independent measurements
+>
+>   ![image-20200225212858894](Deep Learning Note.assets/image-20200225212858894.png)
+>
+>   \- expensive to train
+
 ### Data Engineering
 
 #### Data Augmentation
