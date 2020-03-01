@@ -56,6 +56,13 @@
 >
 >   \- expensive to train
 
+####  Hints
+
+> ![image-20200226091610722](Deep Learning Note.assets/image-20200226091610722.png)
+>
+> - it improves feature selection.
+> - Discard the hint units when doing classification.
+
 ### Data Engineering
 
 #### Data Augmentation
