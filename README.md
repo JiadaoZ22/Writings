@@ -1,12 +1,18 @@
 # Math Cheat Sheet
 
-### Loss
+### Math Symbols
 
 ```latex
 \mathcal{L}
 ```
 
 $\mathcal{L}$
+
+```latex
+\mathcal{N}
+```
+
+$\mathcal{N}$
 
 ### Vector
 
