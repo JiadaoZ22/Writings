@@ -63,6 +63,23 @@
 > - it improves feature selection.
 > - Discard the hint units when doing classification.
 
+#### Drop out
+
+##### Theory
+
+> - As one of Regularion method, don't use it unless you want to decrease overfitting.
+> - ![image-20200316115534867](Deep Learning Note.assets/image-20200316115534867.png)
+
+##### Debug
+
+> 1. Turn off Drop-out, then check the loss function to be monotonically decreasing learned.
+>
+>    $J(W,B)={1\over{m}}\sum\limits_{i=1}^m L(\hat{y^i},y^i)+{{\lambda}\over{2m}}\sum\limits_{l=i}^{L}\|W^{[l]}\|^2_F \\ \|W^{[l]}\|^2_F=\sum\limits_{i=1}^{n^{[l-1]}}\sum\limits_{j=1}^{n^{[l]}}{(W_{i,j}^{[l]})}^2 \\ w:(n^{[l-1]}, n^{[l]})\text{ hidden units of layer $l-1$ and $l$}$
+>
+> 2. Turn on Drop-out.
+
+
+
 ### Data Engineering
 
 #### Data Augmentation
