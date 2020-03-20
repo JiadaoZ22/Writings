@@ -30,6 +30,26 @@
 > \Delta f=0
 > $$
 
+#### Orthogonaliztion
+
+#### Gradient Relavent
+
+##### Exploding / Vanishing Gradients
+
+> - How it works?![image-20200318160932751](Deep Learning Note.assets/image-20200318160932751.png)
+> - Another hyper-parameter to tune: **$n^{[l-1]}$**![image-20200318162637241](Deep Learning Note.assets/image-20200318162637241.png)
+
+##### Two-sided gradient's advantage
+
+> - more accurate than single-sided version
+> - It could give you an approximation of relationship between **two-sided gradient and the $\epsilon$** (see the bottom of below picture)
+> - ![image-20200318164117447](Deep Learning Note.assets/image-20200318164117447.png)
+
+##### Gradient Checking
+
+> - ![image-20200318164655109](Deep Learning Note.assets/image-20200318164655109.png)
+> - ![image-20200318165522450](Deep Learning Note.assets/image-20200318165522450.png)
+
 ### Models
 
 #### Discriminant & Generative
@@ -73,8 +93,9 @@
 ##### Debug
 
 > 1. Turn off Drop-out, then check the loss function to be monotonically decreasing learned.
->
->    $J(W,B)={1\over{m}}\sum\limits_{i=1}^m L(\hat{y^i},y^i)+{{\lambda}\over{2m}}\sum\limits_{l=i}^{L}\|W^{[l]}\|^2_F \\ \|W^{[l]}\|^2_F=\sum\limits_{i=1}^{n^{[l-1]}}\sum\limits_{j=1}^{n^{[l]}}{(W_{i,j}^{[l]})}^2 \\ w:(n^{[l-1]}, n^{[l]})\text{ hidden units of layer $l-1$ and $l$}$
+>    $$
+>    J(W,B)={1\over{m}}\sum\limits_{i=1}^m \mathcal{L}(\hat{y^i},y^i)+{{\lambda}\over{2m}}\sum\limits_{l=i}^{L}\|W^{[l]}\|^2_F \\ \|W^{[l]}\|^2_F=\sum\limits_{i=1}^{n^{[l-1]}}\sum\limits_{j=1}^{n^{[l]}}{(W_{i,j}^{[l]})}^2 \\ w:(n^{[l-1]}, n^{[l]})\text{ hidden units of layer $l-1$ and $l$}
+>    $$
 >
 > 2. Turn on Drop-out.
 
