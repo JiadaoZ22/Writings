@@ -30,6 +30,13 @@
 > \Delta f=0
 > $$
 
+#####  Local Optima 
+
+>- Left: local optima;	Right: Saddle point (your learning algorithm most likely to be in when the dimension of your data is high).
+>  - Your intuition of local dimension doesn't transfer to high dimensional space in fact.
+>  - ![image-20200321173012212](Deep Learning Note.assets/image-20200321173012212.png)
+>  - ![image-20200321173211922](Deep Learning Note.assets/image-20200321173211922.png)
+
 #### Orthogonaliztion
 
 #### Gradient Relavent
@@ -49,6 +56,26 @@
 
 > - ![image-20200318164655109](Deep Learning Note.assets/image-20200318164655109.png)
 > - ![image-20200318165522450](Deep Learning Note.assets/image-20200318165522450.png)
+
+##### Exponentially Weighted Averages
+
+> - Depend on $\beta$ you chose, the range of data is considered (Here $\theta$ is the current day's temperature)
+>
+> - ![image-20200320141904515](Deep Learning Note.assets/image-20200320141904515.png)
+>
+> - Math:
+>
+>   ![image-20200320142741328](Deep Learning Note.assets/image-20200320142741328.png)
+>
+> - Implementation:
+>
+>   ![image-20200320143012447](Deep Learning Note.assets/image-20200320143012447.png)
+
+###### Biased Correction
+
+> - when you are warming up, especially in the initial period, biased correction could help you approach the purple line to green line to have a better approximation.
+>
+>   ![image-20200320143445645](Deep Learning Note.assets/image-20200320143445645.png)
 
 ### Models
 
@@ -90,7 +117,33 @@
 > - As one of Regularion method, don't use it unless you want to decrease overfitting.
 > - ![image-20200316115534867](Deep Learning Note.assets/image-20200316115534867.png)
 
-##### Debug
+#### Batch Normalization
+
+##### Theory
+
+> - Implement it before `Activation layer` is more oftern. Not only use Normalization to the `Input layer`.
+>   - ![image-20200321110530576](Deep Learning Note.assets/image-20200321110530576.png)
+>   - ![image-20200321111413941](Deep Learning Note.assets/image-20200321111413941.png)
+>   - ![image-20200321111743369](Deep Learning Note.assets/image-20200321111743369.png)
+>   - Notice that you may eliminate weiught of bias $b$, instead using $\beta$ to control the normalized $z$. 
+>   - ![image-20200321112328732](Deep Learning Note.assets/image-20200321112328732.png)
+>   - ![image-20200321112718513](Deep Learning Note.assets/image-20200321112718513.png)
+
+##### Wht it works
+
+> - Normalizing the feature to speed up training.
+> - Reduce the amount that the distribution that hidden unit values shifts (when input changing). In other words, it reduce the coupling between the earlier layer's parameters and the later layer's.
+> - ![image-20200321141152770](Deep Learning Note.assets/image-20200321141152770.png)
+
+#### SoftMax
+
+##### Loss Function
+
+> - ![image-20200321172329964](Deep Learning Note.assets/image-20200321172329964.png)
+
+
+
+#### Debug
 
 > 1. Turn off Drop-out, then check the loss function to be monotonically decreasing learned.
 >    $$
@@ -99,7 +152,28 @@
 >
 > 2. Turn on Drop-out.
 
+#### Tuning Strategies
 
+##### Adam Optimizer:
+
+> - Priority: Red -> Yellow -> Blue
+> - ![image-20200321101221048](Deep Learning Note.assets/image-20200321101221048.png)
+
+##### Hyper-parameter Searching
+
+> - Fixed values limit the result cause you don't know which parameter plays an important role.
+>   - ![image-20200321102831109](Deep Learning Note.assets/image-20200321102831109.png)
+> - Then decrease your searching area to find more accurate pairs.
+>   - ![image-20200321103216451](Deep Learning Note.assets/image-20200321103216451.png)
+
+##### Hyper-parameter Coordinated Transformation
+
+> - What if Random Uniform doesn't work? (i.g. you wanna search between $.0001$ to $1$)
+>   - Logarithmic Operation
+>   - ![image-20200321103949462](Deep Learning Note.assets/image-20200321103949462.png)
+> - What if we want to find the $\beta$ ?
+>   - As you can see, due to ${1}\over{1-\beta}$, when $\beta$ changes from $.999$ to $.9995$, the impact is really huge!
+>   - ![image-20200321104558987](Deep Learning Note.assets/image-20200321104558987.png)
 
 ### Data Engineering
 
