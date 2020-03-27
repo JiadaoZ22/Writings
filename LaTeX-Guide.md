@@ -75,6 +75,37 @@
 >
 > ![image-20200325173447140](LaTeX-Guide.assets/image-20200325173447140.png)
 
+> ```latex
+> \begin{table}
+> \caption{Comparison of wristband-based gesture recognition platform}
+> \centering
+> \begin{tabular}{cccc}
+> \hline
+>   \textbf{Platform} & \textbf{Open API}  & \textbf{Wearable} &  \textbf{Affordable price} \\
+>   \hline
+>   Dong et al.~\cite{dong2009device} & $\times$ & $\times$ & $\times$ \\
+> 
+>   Junker et al.~\cite{junker2008gesture} & $\times$ & $\times$ & $\surd$ \\
+> 
+>   eWatch~\cite{maurer2006ewatch} & $\times$ & $\times$ & $\surd$ \\
+> 
+>   RisQ~\cite{parate2014risq} & $\times$ & $\surd$ & $\surd$ \\
+> 
+>   E-Gesture~\cite{park2011gesture} & $\surd$ & $\times$ & $\surd$ \\
+> 
+>   E4~\cite{E4} & $\surd$ & $\surd$ & $\times$ \\
+> 
+>   Moto 360 (2nd Gen.)~\cite{moto360}  & $\surd$ & $\surd$ & $\times$  \\
+> 
+>   Ultigesture Wristband  & $\surd$  & $\surd$ & $\surd$ \\
+>   \hline
+> \end{tabular}
+> \label{table:platform_comparison}
+> \end{table}
+> ```
+>
+> ![image-20200327011340288](LaTeX-Guide.assets/image-20200327011340288.png)
+
 ### Figure
 
 > ```latex
@@ -108,3 +139,13 @@
 >
 > ![image-20200325175924975](LaTeX-Guide.assets/image-20200325175924975.png)
 
+> ```latex
+> \begin{figure}
+> \centering
+>   \includegraphics[width=0.9\columnwidth]{figures/Mode_Transition.pdf}
+>   \caption{Mode Transition}
+>    \label{fig:Mode_Transition}
+> \end{figure}
+> ```
+>
+> ![image-20200327021657137](LaTeX-Guide.assets/image-20200327021657137.png)
