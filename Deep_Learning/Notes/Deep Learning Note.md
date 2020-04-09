@@ -79,9 +79,41 @@
 
 ### Models
 
-#### Discriminant & Generative
+#### Input
 
-> + Discriminant:
+##### Data Augmentation
+
+###### CV
+
+> - Flipping 翻转
+> - Rotation 旋转
+> - Rescaling 缩放
+> - Cropping 剪裁
+> - Shifting 平移
+> - Brightness/Contrast/Colorfulness 亮度/饱和度/对比度
+> - Gaussian Noise
+
+###### NLP
+
+> - Translate Back
+>   - Translating current language samples to another language then translate it back again
+> - Text Augmentation
+>   - Synonyms Replace
+>   - Randomly Inset
+>   - Randomly Swap
+>   - Randomly Delete
+
+#### Architecture
+
+##### Depth of the model
+
+> Based on our discussion above, it seems that smaller neural networks  can be preferred if the data is not complex enough to prevent  overfitting. However, this is incorrect - there are many other preferred ways to prevent overfitting in Neural Networks that we will discuss  later (such as L2 regularization, dropout, input noise). In practice, it is always better to use these methods to control overfitting instead of the number of neurons.
+>
+> The subtle reason behind this is that smaller networks are harder to  train with local methods such as Gradient Descent: It’s clear that their loss functions have relatively few local minima, but it turns out that  many of these minima are easier to converge to, and that they are bad  (i.e. with high loss). Conversely, bigger neural networks contain  significantly more local minima, but these minima turn out to be much  better in terms of their actual loss. Since Neural Networks are  non-convex, it is hard to study these properties mathematically, but  some attempts to understand these objective functions have been made,  e.g. in a recent paper [The Loss Surfaces of Multilayer Networks](http://arxiv.org/abs/1412.0233). In practice, what you find is that if you train a small network the  final loss can display a good amount of variance - in some cases you get lucky and converge to a good place but in some cases you get trapped in one of the bad minima. On the other hand, if you train a large network  you’ll start to find many different solutions, but the variance in the  final achieved loss will be much smaller. In other words, all solutions  are about equally as good, and rely less on the luck of random  initialization.
+
+##### Discriminant & Generative
+
+> - Discriminant:
 >
 >   \+ don’t have to learn parameters which aren’t used (e.g. covariance)
 >
@@ -99,49 +131,72 @@
 >
 >   \+ easy to add independent measurements
 >
->   ![image-20200225212858894](Deep Learning Note.assets/image-20200225212858894.png)
+>   ![image-20200225212858894](file:///Users/jiadao/Documents/GitHub/Writings/Deep_Learning/Notes/Deep%20Learning%20Note.assets/image-20200225212858894.png?lastModify=1586442857)
 >
 >   \- expensive to train
 
-####  Hints
+##### Hints
 
-> ![image-20200226091610722](Deep Learning Note.assets/image-20200226091610722.png)
+> ![image-20200226091610722](file:///Users/jiadao/Documents/GitHub/Writings/Deep_Learning/Notes/Deep%20Learning%20Note.assets/image-20200226091610722.png?lastModify=1586442857)
 >
 > - it improves feature selection.
 > - Discard the hint units when doing classification.
 
-#### Drop out
+#### Regularization
 
-##### Theory
+##### Drop out
+
+###### Theory
 
 > - As one of Regularion method, don't use it unless you want to decrease overfitting.
-> - ![image-20200316115534867](Deep Learning Note.assets/image-20200316115534867.png)
+> - ![image-20200316115534867](file:///Users/jiadao/Documents/GitHub/Writings/Deep_Learning/Notes/Deep%20Learning%20Note.assets/image-20200316115534867.png?lastModify=1586442857)
 
-#### Batch Normalization
+##### Batch Normalization
 
-##### Theory
+###### Theory
 
 > - Implement it before `Activation layer` is more oftern. Not only use Normalization to the `Input layer`.
->   - ![image-20200321110530576](Deep Learning Note.assets/image-20200321110530576.png)
->   - ![image-20200321111413941](Deep Learning Note.assets/image-20200321111413941.png)
->   - ![image-20200321111743369](Deep Learning Note.assets/image-20200321111743369.png)
->   - Notice that you may eliminate weiught of bias $b$, instead using $\beta$ to control the normalized $z$. 
->   - ![image-20200321112328732](Deep Learning Note.assets/image-20200321112328732.png)
->   - ![image-20200321112718513](Deep Learning Note.assets/image-20200321112718513.png)
+>   - ![image-20200321110530576](file:///Users/jiadao/Documents/GitHub/Writings/Deep_Learning/Notes/Deep%20Learning%20Note.assets/image-20200321110530576.png?lastModify=1586442857)
+>   - ![image-20200321111413941](file:///Users/jiadao/Documents/GitHub/Writings/Deep_Learning/Notes/Deep%20Learning%20Note.assets/image-20200321111413941.png?lastModify=1586442857)
+>   - ![image-20200321111743369](file:///Users/jiadao/Documents/GitHub/Writings/Deep_Learning/Notes/Deep%20Learning%20Note.assets/image-20200321111743369.png?lastModify=1586442857)
+>   - Notice that you may eliminate weiught of bias , instead using  to control the normalized . 
+>   - ![image-20200321112328732](file:///Users/jiadao/Documents/GitHub/Writings/Deep_Learning/Notes/Deep%20Learning%20Note.assets/image-20200321112328732.png?lastModify=1586442857)
+>   - ![image-20200321112718513](file:///Users/jiadao/Documents/GitHub/Writings/Deep_Learning/Notes/Deep%20Learning%20Note.assets/image-20200321112718513.png?lastModify=1586442857)
 
-##### Wht it works
+###### How it works
 
 > - Normalizing the feature to speed up training.
 > - Reduce the amount that the distribution that hidden unit values shifts (when input changing). In other words, it reduce the coupling between the earlier layer's parameters and the later layer's.
-> - ![image-20200321141152770](Deep Learning Note.assets/image-20200321141152770.png)
+> - ![image-20200321141152770](file:///Users/jiadao/Documents/GitHub/Writings/Deep_Learning/Notes/Deep%20Learning%20Note.assets/image-20200321141152770.png?lastModify=1586442857)
 
-#### SoftMax
+#### Output
 
-##### Loss Function
+##### Activation function for the last layer?
 
-> - ![image-20200321172329964](Deep Learning Note.assets/image-20200321172329964.png)
+> - **Regression**
+>   - use `Linear` is good, usually `mean square error` is used.
+> - **Classification**
+>   - Have to say it depends on your `lossfunction`.
+>   - If you want `True` or `False`, or the task is multi-objects detection, `Sigmoid` is fine.
+>   - Else, go for `Softmax` if you ask for probability of each class.
 
+##### Confidence & Uncertainty
 
+> - **Could we explained the uncertainty or confidence by `Softmax`'s output?**
+>
+>   - In the paper [Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning](http://proceedings.mlr.press/v48/gal16.pdf), Yarin Gal and Zoubin Ghahramani argue the following
+>
+>     > In classification, predictive probabilities obtained at the end of the pipeline  (the **softmax output**) are often erroneously  interpreted as model confidence. A model can be uncertain in its  predictions even with a high softmax output (fig. 1). Passing a point  estimate of a function (solid line 1a) through a softmax (solid line 1b) results in [**extrapolations**](https://stats.stackexchange.com/q/418803/82135) with **unjustified** high confidence for points far from the training data. *𝑥*∗
+>
+>     >  for example would be classified as class 1 with probability 1.
+>
+>     Here's figure 1.
+>
+>     [![enter image description here](Deep Learning Note.assets/Z6VuZ.png)](https://i.stack.imgur.com/Z6VuZ.png)
+>
+>     So, if we interpret the outputs of the softmax as model uncertainty or confidence, the model is highly confident for point *𝑥*∗
+>
+>     , even though no training data was observed in that region, but this can  be misleading, because the true function, in that region, could be  completely different than the learned one (the solid black line).
 
 #### Debug
 
@@ -175,31 +230,7 @@
 >   - As you can see, due to ${1}\over{1-\beta}$, when $\beta$ changes from $.999$ to $.9995$, the impact is really huge!
 >   - ![image-20200321104558987](Deep Learning Note.assets/image-20200321104558987.png)
 
-### Data Engineering
 
-#### Data Augmentation
-
-##### CV
-
-> - Flipping 翻转
-> - Rotation 旋转
-> - Rescaling 缩放
-> - Cropping 剪裁
-> - Shifting 平移
-> - Brightness/Contrast/Colorfulness 亮度/饱和度/对比度
-> - Gaussian Noise
-
-##### NLP
-
-> - Translate Back
->   - Translating current language samples to another language then translate it back again
-> - Text Augmentation
->   - Synonyms Replace
->   - Randomly Inset
->   - Randomly Swap
->   - Randomly Delete
-
-### Feature Engineering
 
 ### Model Selection
 
@@ -309,6 +340,12 @@ https://rinuboney.github.io/2016/01/19/ladder-network.html
 #### Bézier **Curve**
 
 > https://medium.com/@Acegikmo/the-ever-so-lovely-b%C3%A9zier-curve-eb27514da3bf
+
+## Naming Convention
+
+> ![image-20200407184741619](Deep Learning Note.assets/image-20200407184741619.png)
+
+
 
 
 
