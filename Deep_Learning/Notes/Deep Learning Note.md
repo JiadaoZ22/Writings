@@ -1,6 +1,20 @@
 # Deep Learning Notebook
 
-## Machine Learning
+## Paper Submission
+
+> - CV:
+>
+>   - ICCV/CVPR/ECCV
+> - ML:
+>
+>   - NEURIPS/ICML/AISTATS/UAI/ICLR
+> - DM:
+>
+>   - KDD/ICDM/AISTATS/UAI
+> - NLP:
+>   - ACL/EMNLP/NAACL/ICASSP
+> - ROBTICS:
+>   - RSS/ICRA/IROS
 
 ### Mathematics
 
@@ -123,6 +137,20 @@
 >
 >   \- have to retrain if dimension of feature vectors changed
 >
+>   > - Logistic Regression
+>   >
+>   > - K Nearest Neighbor
+>   >
+>   > - Support Vector Machine
+>   >
+>   > - Decision Tree
+>   >
+>   > - Neural Networks (Conventional)
+>   >
+>   > - Conditional Random Field
+>   >
+>   >   ![image-20200414223808853](Deep Learning Note.assets/image-20200414223808853.png)
+>
 > - Generative:
 >
 >   +have confidence measure
@@ -134,6 +162,10 @@
 >   ![image-20200225212858894](file:///Users/jiadao/Documents/GitHub/Writings/Deep_Learning/Notes/Deep%20Learning%20Note.assets/image-20200225212858894.png?lastModify=1586442857)
 >
 >   \- expensive to train
+>
+>   > - Naive Bayes
+>   > - Mixture Model
+>   > - Hidden Markov Model
 
 ##### Hints
 
@@ -249,6 +281,10 @@ https://stats.stackexchange.com/questions/61783/bias-and-variance-in-leave-one-o
 
 ## Transfer Learning
 
+### Scenarios
+
+![image-20200414152724423](Deep Learning Note.assets/image-20200414152724423.png)
+
 ### Implementations
 
 #### Transfer Learning with pretrained CNN from Tensorflow Core
@@ -340,6 +376,10 @@ https://rinuboney.github.io/2016/01/19/ladder-network.html
 #### Bézier **Curve**
 
 > https://medium.com/@Acegikmo/the-ever-so-lovely-b%C3%A9zier-curve-eb27514da3bf
+
+### Collaborative Filtering
+
+> **Collaborative filtering** is the task of making predictions about the interests of a user based on interests of many other users. As an example, let's look at the task of movie recommendation.  Suppose we have 1,000,000 users, and a list of the movies each user has watched (from a catalog of 500,000 movies). Our goal is to recommend movies to users.
 
 ## Naming Convention
 
