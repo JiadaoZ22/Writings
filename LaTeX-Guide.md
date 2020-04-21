@@ -149,3 +149,7 @@
 > ```
 >
 > ![image-20200327021657137](LaTeX-Guide.assets/image-20200327021657137.png)
+
+## OneNote
+
+> Holding **`control - +`** together then you could type in math model

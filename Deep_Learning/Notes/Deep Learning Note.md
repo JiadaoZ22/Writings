@@ -16,21 +16,21 @@
 > - ROBTICS:
 >   - RSS/ICRA/IROS
 
-### Mathematics
+## Mathematics
 
-#### Convexity
+### Convexity
 
-##### Smoothness
+#### Smoothness
 
 >  a smooth function is **continuous and differentiable everywhere**.
 >
 > - Absolute function is continuous but not differentiable at $x=0$.
 
-##### Stableness
+#### Stableness
 
 > a stationary process is unconditional joint probability distribution (parameters) does not change when shifted in time.
 
-##### Harmonic Function
+#### Harmonic Function
 
 > it is a twice continuously differentiable function $f:U\rightarrow \R$, where $U$ is an open subset of $\R$, that satisfy Laplace's equation everywhere on U:
 >
@@ -44,7 +44,7 @@
 > \Delta f=0
 > $$
 
-#####  Local Optima 
+####  Local Optima 
 
 >- Left: local optima;	Right: Saddle point (your learning algorithm most likely to be in when the dimension of your data is high).
 >  - Your intuition of local dimension doesn't transfer to high dimensional space in fact.
@@ -53,25 +53,25 @@
 
 #### Orthogonaliztion
 
-#### Gradient Relavent
+### Gradient Relavent
 
-##### Exploding / Vanishing Gradients
+#### Exploding / Vanishing Gradients
 
 > - How it works?![image-20200318160932751](Deep Learning Note.assets/image-20200318160932751.png)
 > - Another hyper-parameter to tune: **$n^{[l-1]}$**![image-20200318162637241](Deep Learning Note.assets/image-20200318162637241.png)
 
-##### Two-sided gradient's advantage
+#### Two-sided gradient's advantage
 
 > - more accurate than single-sided version
 > - It could give you an approximation of relationship between **two-sided gradient and the $\epsilon$** (see the bottom of below picture)
 > - ![image-20200318164117447](Deep Learning Note.assets/image-20200318164117447.png)
 
-##### Gradient Checking
+#### Gradient Checking
 
 > - ![image-20200318164655109](Deep Learning Note.assets/image-20200318164655109.png)
 > - ![image-20200318165522450](Deep Learning Note.assets/image-20200318165522450.png)
 
-##### Exponentially Weighted Averages
+#### Exponentially Weighted Averages
 
 > - Depend on $\beta$ you chose, the range of data is considered (Here $\theta$ is the current day's temperature)
 >
@@ -85,19 +85,35 @@
 >
 >   ![image-20200320143012447](Deep Learning Note.assets/image-20200320143012447.png)
 
-###### Biased Correction
+#### Biased Correction
 
 > - when you are warming up, especially in the initial period, biased correction could help you approach the purple line to green line to have a better approximation.
 >
 >   ![image-20200320143445645](Deep Learning Note.assets/image-20200320143445645.png)
 
-### Models
+### Similarity Quantative Evaluation
 
-#### Input
+> ![image-20200419095708755](Deep Learning Note.assets/image-20200419095708755.png)
 
-##### Data Augmentation
+### Colinearity
 
-###### CV
+> - **Collinearity is a condition in which some of theindependent variables are highly correlated.**
+>   - It usually happens in Regression tasks.
+>   - Ways of dealing with it
+>     - 1) Ignore it. If prediction of y values is the object of your study, then collinearity is not a problem. 2) Use an estimator of the regression coefficients other than the least squares estimators. An alternative is to use ridge regression estimators; Draper and Smith (1981),Applied Regression Analysis, 2nd edition,pp. 313-324. 3) Get rid of the “redundant” variables by using a variable selection technique.
+>   - How is collinearity identified?
+>     - 1) Examine the correlation coefficient for each pair of independent variables. A value of the correlation near ±1 indicates that the two variables are highly correlated.
+>     - 2) The variance inflation factorsare also very useful. $VIF(j)$ is the factor by which the variance of $\hat{\beta_j}$ is increased over what itwould be if $x_j$ was uncorrelated with the other independent variables.  If all valuesof $VIF(j)$ are near 1, then collinearity is not a problem. $VIF(j)>10$ indicates serious collinearity.
+> - ![image-20200420152651275](Deep Learning Note.assets/image-20200420152651275.png)
+> - **https://janhove.github.io/analysis/2019/09/11/collinearity**
+
+## Models
+
+### Input
+
+#### Data Augmentation
+
+##### CV
 
 > - Flipping 翻转
 > - Rotation 旋转
@@ -107,7 +123,7 @@
 > - Brightness/Contrast/Colorfulness 亮度/饱和度/对比度
 > - Gaussian Noise
 
-###### NLP
+##### NLP
 
 > - Translate Back
 >   - Translating current language samples to another language then translate it back again
@@ -117,15 +133,15 @@
 >   - Randomly Swap
 >   - Randomly Delete
 
-#### Architecture
+### Architecture
 
-##### Depth of the model
+#### Depth of the model
 
 > Based on our discussion above, it seems that smaller neural networks  can be preferred if the data is not complex enough to prevent  overfitting. However, this is incorrect - there are many other preferred ways to prevent overfitting in Neural Networks that we will discuss  later (such as L2 regularization, dropout, input noise). In practice, it is always better to use these methods to control overfitting instead of the number of neurons.
 >
 > The subtle reason behind this is that smaller networks are harder to  train with local methods such as Gradient Descent: It’s clear that their loss functions have relatively few local minima, but it turns out that  many of these minima are easier to converge to, and that they are bad  (i.e. with high loss). Conversely, bigger neural networks contain  significantly more local minima, but these minima turn out to be much  better in terms of their actual loss. Since Neural Networks are  non-convex, it is hard to study these properties mathematically, but  some attempts to understand these objective functions have been made,  e.g. in a recent paper [The Loss Surfaces of Multilayer Networks](http://arxiv.org/abs/1412.0233). In practice, what you find is that if you train a small network the  final loss can display a good amount of variance - in some cases you get lucky and converge to a good place but in some cases you get trapped in one of the bad minima. On the other hand, if you train a large network  you’ll start to find many different solutions, but the variance in the  final achieved loss will be much smaller. In other words, all solutions  are about equally as good, and rely less on the luck of random  initialization.
 
-##### Discriminant & Generative
+#### Discriminant & Generative
 
 > - Discriminant:
 >
@@ -167,25 +183,25 @@
 >   > - Mixture Model
 >   > - Hidden Markov Model
 
-##### Hints
+#### Hints
 
 > ![image-20200226091610722](file:///Users/jiadao/Documents/GitHub/Writings/Deep_Learning/Notes/Deep%20Learning%20Note.assets/image-20200226091610722.png?lastModify=1586442857)
 >
 > - it improves feature selection.
 > - Discard the hint units when doing classification.
 
-#### Regularization
+### Regularization
 
-##### Drop out
+#### Drop out
 
-###### Theory
+##### Theory
 
 > - As one of Regularion method, don't use it unless you want to decrease overfitting.
 > - ![image-20200316115534867](file:///Users/jiadao/Documents/GitHub/Writings/Deep_Learning/Notes/Deep%20Learning%20Note.assets/image-20200316115534867.png?lastModify=1586442857)
 
-##### Batch Normalization
+#### Batch Normalization
 
-###### Theory
+##### Theory
 
 > - Implement it before `Activation layer` is more oftern. Not only use Normalization to the `Input layer`.
 >   - ![image-20200321110530576](file:///Users/jiadao/Documents/GitHub/Writings/Deep_Learning/Notes/Deep%20Learning%20Note.assets/image-20200321110530576.png?lastModify=1586442857)
@@ -195,15 +211,15 @@
 >   - ![image-20200321112328732](file:///Users/jiadao/Documents/GitHub/Writings/Deep_Learning/Notes/Deep%20Learning%20Note.assets/image-20200321112328732.png?lastModify=1586442857)
 >   - ![image-20200321112718513](file:///Users/jiadao/Documents/GitHub/Writings/Deep_Learning/Notes/Deep%20Learning%20Note.assets/image-20200321112718513.png?lastModify=1586442857)
 
-###### How it works
+##### How it works
 
 > - Normalizing the feature to speed up training.
 > - Reduce the amount that the distribution that hidden unit values shifts (when input changing). In other words, it reduce the coupling between the earlier layer's parameters and the later layer's.
 > - ![image-20200321141152770](file:///Users/jiadao/Documents/GitHub/Writings/Deep_Learning/Notes/Deep%20Learning%20Note.assets/image-20200321141152770.png?lastModify=1586442857)
 
-#### Output
+### Output
 
-##### Activation function for the last layer?
+#### Activation function for the last layer?
 
 > - **Regression**
 >   - use `Linear` is good, usually `mean square error` is used.
@@ -212,7 +228,7 @@
 >   - If you want `True` or `False`, or the task is multi-objects detection, `Sigmoid` is fine.
 >   - Else, go for `Softmax` if you ask for probability of each class.
 
-##### Confidence & Uncertainty
+#### Confidence & Uncertainty
 
 > - **Could we explained the uncertainty or confidence by `Softmax`'s output?**
 >
@@ -230,7 +246,7 @@
 >
 >     , even though no training data was observed in that region, but this can  be misleading, because the true function, in that region, could be  completely different than the learned one (the solid black line).
 
-#### Debug
+### Debug
 
 > 1. Turn off Drop-out, then check the loss function to be monotonically decreasing learned.
 >    $$
@@ -239,21 +255,21 @@
 >
 > 2. Turn on Drop-out.
 
-#### Tuning Strategies
+### Tuning Strategies
 
-##### Adam Optimizer:
+#### Adam Optimizer:
 
 > - Priority: Red -> Yellow -> Blue
 > - ![image-20200321101221048](Deep Learning Note.assets/image-20200321101221048.png)
 
-##### Hyper-parameter Searching
+#### Hyper-parameter Searching
 
 > - Fixed values limit the result cause you don't know which parameter plays an important role.
 >   - ![image-20200321102831109](Deep Learning Note.assets/image-20200321102831109.png)
 > - Then decrease your searching area to find more accurate pairs.
 >   - ![image-20200321103216451](Deep Learning Note.assets/image-20200321103216451.png)
 
-##### Hyper-parameter Coordinated Transformation
+#### Hyper-parameter Coordinated Transformation
 
 > - What if Random Uniform doesn't work? (i.g. you wanna search between $.0001$ to $1$)
 >   - Logarithmic Operation
@@ -384,8 +400,6 @@ https://rinuboney.github.io/2016/01/19/ladder-network.html
 ## Naming Convention
 
 > ![image-20200407184741619](Deep Learning Note.assets/image-20200407184741619.png)
-
-
 
 
 
