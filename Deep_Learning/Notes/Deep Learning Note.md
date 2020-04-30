@@ -51,6 +51,10 @@
 >  - ![image-20200321173012212](Deep Learning Note.assets/image-20200321173012212.png)
 >  - ![image-20200321173211922](Deep Learning Note.assets/image-20200321173211922.png)
 
+#### infimum VS minimum
+
+> ![image-20200422161824400](Deep Learning Note.assets/image-20200422161824400.png)
+
 #### Orthogonaliztion
 
 ### Gradient Relavent
