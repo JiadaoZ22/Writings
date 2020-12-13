@@ -2,6 +2,12 @@
 
 ## Math
 
+>  **should import amsmath if you use want any serious math display**!
+>
+> ```latex
+> \usepackage{amsmath, amsfonts, amssymb}
+> ```
+
 ### Alignment
 
 > https://www.overleaf.com/learn/latex/aligning_equations_with_amsmath
@@ -16,6 +22,7 @@
 ### Open Math
 
 > ```latex
+> % open math block, doesn't like begin{equation}, this doesn't number the equation
 > \[
 > \mathbf{\hat{P}} =
 > \begin{bmatrix}
