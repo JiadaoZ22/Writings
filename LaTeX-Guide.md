@@ -12,8 +12,23 @@
 > 3x + 9y &=  -12
 > \end{aligned}
 > ```
+
+### Open Math
+
+> ```latex
+> \[
+> \mathbf{\hat{P}} =
+> \begin{bmatrix}
+>     \begin{array}{c|c}
+>          \alpha \mathbf{\bar{P}} & (1-\alpha)\mathbf{e} \\
+>          \hline
+>          \mathbf{v}^T & \mathbf{0}
+>     \end{array}
+> \end{bmatrix}
+> \]
+> ```
 >
-> 
+> <img src="LaTeX-Guide.assets/image-20201212223859094.png" alt="image-20201212223859094" style="zoom: 200%;" />
 
 ## Grammar
 
