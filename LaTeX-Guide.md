@@ -24,6 +24,7 @@
 > ```latex
 > % open math block, doesn't like begin{equation}, this doesn't number the equation
 > \[
+> \renewcommand\arraystretch{1.3}
 > \mathbf{\hat{P}} =
 > \begin{bmatrix}
 >     \begin{array}{c|c}
@@ -35,7 +36,7 @@
 > \]
 > ```
 >
-> <img src="LaTeX-Guide.assets/image-20201212223859094.png" alt="image-20201212223859094" style="zoom: 200%;" />
+> <img src="LaTeX-Guide.assets/image-20201212230928915.png" alt="image-20201212230928915"  />
 
 ## Grammar
 
