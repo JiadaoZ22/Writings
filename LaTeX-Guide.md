@@ -38,6 +38,8 @@
 >
 > <img src="LaTeX-Guide.assets/image-20201212230928915.png" alt="image-20201212230928915"  />
 
+
+
 ## Grammar
 
 ### Font Style
@@ -127,7 +129,7 @@
 > \end{table}
 > ```
 >
-> ![image-20200327011340288](LaTeX-Guide.assets/image-20200327011340288.png)
+> <img src="LaTeX-Guide.assets/image-20200327011340288.png" alt="image-20200327011340288" style="zoom: 67%;" />
 
 ### Figure
 
@@ -160,7 +162,7 @@
 > \end{wrapfigure}
 > ```
 >
-> ![image-20200325175924975](LaTeX-Guide.assets/image-20200325175924975.png)
+> <img src="LaTeX-Guide.assets/image-20200325175924975.png" alt="image-20200325175924975" style="zoom:50%;" />
 
 > ```latex
 > \begin{figure}
@@ -171,7 +173,34 @@
 > \end{figure}
 > ```
 >
-> ![image-20200327021657137](LaTeX-Guide.assets/image-20200327021657137.png)
+> <img src="LaTeX-Guide.assets/image-20200327021657137.png" alt="image-20200327021657137" style="zoom: 67%;" />
+
+> ```latex
+> \usepackage{graphicx}
+> \usepackage{subcaption}
+> \usepackage[export]{adjustbox}
+> 
+> 
+> \begin{figure}[h]
+> % 
+> \begin{subfigure}[h]{0.5\textwidth}
+> \includegraphics[width=0.3\linewidth, height=3.5cm, center]{imgs/1.png} 
+> \caption{Directed graph representing}
+> \label{fig:subim1}
+> \end{subfigure}
+> %
+> \begin{subfigure}[h]{0.5\textwidth}
+> \includegraphics[width=0.8\linewidth, height=3.5cm, center]{imgs/2.png}
+> \caption{The Markov Chain matrix}
+> \label{fig:subim2}
+> \end{subfigure} 
+> %%
+> \caption{A simple example of a web with $6$ pages}
+> \label{fig:img1}
+> \end{figure}
+> ```
+>
+> <img src="LaTeX-Guide.assets/image-20201213013808909.png" alt="image-20201213013808909" style="zoom: 50%;" />
 
 ## OneNote
 
