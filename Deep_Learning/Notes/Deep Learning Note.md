@@ -57,6 +57,13 @@
 
 #### Orthogonaliztion
 
+> Aiming at separate variables, likes steering, gas and break. It is better to have  a single variable to control them all.
+
+> 1. Fit *training set* well on cost function. (comparing with human performance)
+> 2.  Fit *dev set* well on cost function. (If the result is not good, try another sets of variables)
+> 3. Fit *test set* well on cost function.
+> 4. Performs well in real world.
+
 ### Gradient Relavent
 
 #### Exploding / Vanishing Gradients
