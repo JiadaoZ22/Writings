@@ -9,7 +9,7 @@
 > # conda update anaconda=VersionNumber
 > 
 > # Create ur own virtual environment
-> conda create --name tf24
+> conda create -n tf24 python=3。7
 > 
 > # activate the environ
 > conda activate tf24
