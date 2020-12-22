@@ -51,7 +51,7 @@
 
 > - search for `Environment Variables`, `edit` -> `path` in the `system vaiables` 
 >
-> - the pathes of `CUDA` are taken care by `CUDA`'s installation (skipped)
+> - ~~the pathes of `CUDA` are taken care by `CUDA`'s installation (skipped)~~
 >
 >   <img src="Install Tensor Flow 2_4 on Windows 10.assets/image-20201222142048362.png" alt="image-20201222142048362" style="zoom:50%;" />
 >
