@@ -5,6 +5,7 @@
 > ```shell
 > # update
 > conda update conda
+> conda update anaconda-navigator
 > # conda update anaconda=VersionNumber
 > 
 > # Create ur own virtual environment
