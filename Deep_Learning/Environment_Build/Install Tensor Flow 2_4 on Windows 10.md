@@ -24,7 +24,7 @@
 > python -m pip install -U pip
 > 
 > # install tensorflow
-> pip install tensorflow==2.4.0
+> pip install tensorflow==2.4
 > ```
 
 ## Visual Studio (Skipped, come with Driver)
