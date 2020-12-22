@@ -37,7 +37,7 @@
 
 > - Just use the latest one from the [website](https://www.nvidia.com/Download/index.aspx?lang=en-us#)
 
-## Cuda Tool Kit
+## Cuda Tool Kit (do it)
 
 > - TensorFlow supports [CUDA® 11](https://developer.nvidia.com/cuda-toolkit-archive) (TensorFlow >= 2.4.0)
 >   - Install from the `.exe`
@@ -63,7 +63,7 @@
 >   
 >
 
-## Test It
+## Restart & Test It
 
 > - open a cmd console in `anaconda navigator`
 >
