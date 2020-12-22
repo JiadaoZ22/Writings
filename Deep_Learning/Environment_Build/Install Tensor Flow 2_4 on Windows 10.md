@@ -28,10 +28,10 @@
 > pip install tensorflow==2.4
 > ```
 
-## Visual Studio (Skipped, come with Driver)
+## Visual Studio (Skipped, comes with Nvidia Driver)
 
-> - download VS 2017 from here <a>https://www.techspot.com/downloads/6278-visual-studio.html</a>
-> - **Cuda 10.0 doesn't support VS 2019!!!**
+> - ~~download [VS 2017](https://www.techspot.com/downloads/6278-visual-studio.html)~~
+> - ~~**Cuda 10.0 doesn't support VS 2019!!!**~~
 
 ## Nvidia Driver
 
