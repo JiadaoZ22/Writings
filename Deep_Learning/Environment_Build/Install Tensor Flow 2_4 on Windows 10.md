@@ -3,6 +3,10 @@
 ## Download and Install Anaconda
 
 > ```shell
+> # update
+> conda update conda
+> # conda update anaconda=VersionNumber
+> 
 > # Create ur own virtual environment
 > conda create --name tf24
 > 
@@ -46,11 +50,16 @@
 
 > - search for `Environment Variables`, `edit` -> `path` in the `system vaiables` 
 >
-> - Be awared of `cuda` and `cuDNN`
+> - the pathes of `CUDA` are taken care by `CUDA`'s installation (skipped)
 >
->   ![https://user-images.githubusercontent.com/4515120/52910032-06803880-32d5-11e9-87f2-a4a7627d0c30.png](https://user-images.githubusercontent.com/4515120/52910032-06803880-32d5-11e9-87f2-a4a7627d0c30.png)
+>   <img src="Install Tensor Flow 2_4 on Windows 10.assets/image-20201222142048362.png" alt="image-20201222142048362" style="zoom:50%;" />
 >
->   ![image-20191124164223550](Install%20Tensor%20Flow%202%20on%20Windows%2010.assets/image-20191124164223550.png)
+> - add the pathes of `cuDNN ` (do it)
+>
+>   <img src="Install Tensor Flow 2_4 on Windows 10.assets/image-20201222141844362.png" alt="image-20201222141844362" style="zoom:50%;" />
+>
+>   
+>   
 >
 
 ## Test It
