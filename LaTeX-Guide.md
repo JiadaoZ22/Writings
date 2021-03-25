@@ -1,5 +1,37 @@
 # LaTeX-Guide
 
+## NIPS Citation
+
+> - Create a file named "preamble.tex" which contains style design.
+>
+> - In that file, add
+>
+>   ```latex
+>   % load required packages. I prefer IEEEtran for equations, but that's a
+>   % personal preference.
+>   \usepackage{IEEEtrantools}
+>   \usepackage{csquotes}
+>   
+>   % the citation style follows the requirement of 2020 NIPS
+>   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+>   \usepackage[natbib=true, bibstyle=authoryear-icomp, citestyle=authoryear-icomp, maxbibnames=99]{biblatex}
+>   % \usepackage[style=verbose-ibid, backend=bibtex]{biblatex}
+>   \bibliography{0_citations.bib}
+>   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+>   \renewcommand{\footnotesize}{\tiny}
+>   ```
+>
+> - While writing, use this to print the Bibliography
+>
+>   ```latex
+>   \printbibliography
+>   ```
+
+> ### Refresh Overleaf compiliation
+>
+> - If re-compile doesn't work, that must be the files need totally rebuilt from scratch. Have to `clear caches`!
+> - ![image-20210325190951596](LaTeX-Guide.assets/image-20210325190951596.png)
+
 ## Math
 
 >  **should import amsmath if you use want any serious math display**!
