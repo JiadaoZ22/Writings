@@ -107,8 +107,10 @@
 >       filecolor=magenta,      
 >       urlcolor=cyan,
 >   }
+>   % By default, URLs are printed using mono-spaced fonts. 
 >   \urlstyle{same}
 >   
+>   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 >   % in document
 >   \hyperlink{referecing label}{conetent}
 >   ```
