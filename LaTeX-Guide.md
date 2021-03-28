@@ -94,6 +94,14 @@
 
 ## Grammar
 
+### Paragraph
+
+> - Click to jump to the reference
+>
+>   ```latex
+>   \hyperlink{referecing label}{conetent}
+>   ```
+
 ### Font Style
 
 > **typewriter font**
@@ -104,19 +112,19 @@
 >
 > ![image-20200325180710573](LaTeX-Guide.assets/image-20200325180710573.png)
 
-### Reference
+### Bibliography
 
-> **Design the style**
->
+#### Color the Citation
+
 > ```latex
-> \usepackage{xcolor}
+>\usepackage{xcolor}
 > \hypersetup{
->   colorlinks   = true, %Colours links instead of ugly boxes
->   urlcolor     = blue, %Colour for external hyperlinks
+> colorlinks   = true, %Colours links instead of ugly boxes
+> urlcolor     = blue, %Colour for external hyperlinks
 >   linkcolor    = blue, %Colour of internal links
 >   citecolor   = red %Colour of citations
-> }
-> ```
+>   }
+>   ```
 
 ### Table
 
