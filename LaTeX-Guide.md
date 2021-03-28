@@ -99,6 +99,17 @@
 > - Click to jump to the reference
 >
 >   ```latex
+>   % dependency in preamble
+>   \usepackage{hyperref}
+>   \hypersetup{
+>       colorlinks=true,
+>       linkcolor=blue,
+>       filecolor=magenta,      
+>       urlcolor=cyan,
+>   }
+>   \urlstyle{same}
+>   
+>   % in document
 >   \hyperlink{referecing label}{conetent}
 >   ```
 
