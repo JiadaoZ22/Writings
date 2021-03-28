@@ -42,7 +42,9 @@
 >
 >  - `\bm{}`: use for bold style of Math.
 
-### Sub-equations and Multi-alignment
+### Equations
+
+#### Sub-equations and Multi-alignment
 
 > - Could use `&` as much as you want. 
 > - `{Subequations}` would auto mark them all, notice, you may want to index each sub equations for referencing later.
@@ -63,15 +65,12 @@
 >
 > ![image-20210328171234177](LaTeX-Guide.assets/image-20210328171234177.png)
 
-### Alignment
+#### Equation Index Manipulation
 
-> https://www.overleaf.com/learn/latex/aligning_equations_with_amsmath
+> - Use the last equation's index. (The LaTeX would automatically increase the index for new equation)
 >
 > ```latex
-> \begin{aligned} 
-> 2x - 5y &=  8 \\ 
-> 3x + 9y &=  -12
-> \end{aligned}
+> \addtocounter{equation}{-1}
 > ```
 
 ### Open Math
