@@ -42,6 +42,27 @@
 >
 >  - `\bm{}`: use for bold style of Math.
 
+### Sub-equations and Multi-alignment
+
+> - Could use `&` as much as you want. 
+> - `{Subequations}` would auto mark them all, notice, you may want to index each sub equations for referencing later.
+>
+> ```latex
+> \begin{subequations}
+>          \begin{IEEEeqnarray}{rCl}
+>             (P1): \-\hspace{4}
+>             Q^*(\textbf{h}) &= \arg \max_{\textbf{x}, \bm{\tau}, a} & Q(\textbf{h}, \textbf{x}, \bm{\tau}, a) \label{eq:p1_Q-system_a} \\
+>             & \text{subject to} & \sum^N_{i=1} \tau_i + a \leq 1, \label{eq:p1_Q-system_b} \\
+>             & & a \geq 0, \tau_i \geq 0, \forall i \in \mathcal{N}, \label{eq:p1_Q-system_c} \\
+>             & & x_i \in \{0,1\}. \label{eq:p1_Q-system_d}
+>         \end{IEEEeqnarray}
+>     \end{subequations}
+> ```
+>
+> 
+>
+> ![image-20210328171234177](LaTeX-Guide.assets/image-20210328171234177.png)
+
 ### Alignment
 
 > https://www.overleaf.com/learn/latex/aligning_equations_with_amsmath
@@ -71,8 +92,6 @@
 > ```
 >
 > <img src="LaTeX-Guide.assets/image-20201212230928915.png" alt="image-20201212230928915"  />
-
-
 
 ## Grammar
 
