@@ -36,9 +36,11 @@
 
 >  **should import amsmath if you use want any serious math display**!
 >
-> ```latex
-> \usepackage{amsmath, amsfonts, amssymb}
-> ```
+>  ```latex
+>  \usepackage{amsmath, amsfonts, amssymb}
+>  ```
+>
+>  - `\bm{}`: use for bold style of Math.
 
 ### Alignment
 
