@@ -107,20 +107,35 @@
 > 
 > % self made command for better jumping display
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> % for those referring label you don't need some "text" for it, you may use \label directly instead
+> % \label
+> 
 > \makeatletter
 > \newcommand{\pagetarget}[2]% #1=label (both hypertarget and label), #2=text
 > {\hypertarget{#1}{#2}\protected@write\@auxout{}{%
 >    \string\newlabel{#1}{{#2}{\thepage}{page.\thepage}{#1}{}}}}
 > \makeatother
+> 
 > % \hyperlink{#1}{button} will link to #2.
 > % \pagelink{#1}{button} will link to the page anchor.
 > % \ref{#1} will return #2 and link to #2.
 > % \pageref will return the page and link to #2.
 > % \getrefbykeydefault{#1}{name}{Doc-Start} returns the page anchor.
+> % \textlink returns the #2 and link to page anchor
+> % \eqref returns the equation index and link to page anchor
 > 
-> % its corresponding referencing method
+> %
 > \newcommand{\pagelink}[2]% #1=label, #2=text
 > {\hyperlink{\getrefbykeydefault{#1}{name}{Doc-Start}}{#2}}
+> 
+> % 
+> \newcommand{\textlink}[1]% #1=label
+> {\hyperlink{\getrefbykeydefault{#1}{name}{Doc-Start}}{\getrefnumber{#1}}}
+> 
+> %
+> \renewcommand{\eqref}[1]% #1=label
+> {\hyperlink{\getrefbykeydefault{#1}{name}{Doc-Start}}{Eq.\ref{#1}}}
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > 
 > \begin{document}
