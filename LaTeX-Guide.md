@@ -96,24 +96,72 @@
 
 ### Paragraph
 
-> - Click to jump to the reference
+#### *Better Jumping Logic
+
+> ```latex
+> \documentclass{book}
+> \usepackage{lipsum}
+> \usepackage{hyperref}
+> 
+> % self made command for better jumping display
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> \makeatletter
+> \newcommand{\pagetarget}[2]% #1=label (both hypertarget and label), #2=text
+> {\hypertarget{#1}{#2}\protected@write\@auxout{}{%
+>    \string\newlabel{#1}{{#2}{\thepage}{page.\thepage}{#1}{}}}}
+> \makeatother
+> % \hyperlink{#1}{button} will link to #2.
+> % \pagelink{#1}{button} will link to the page anchor.
+> % \ref{#1} will return #2 and link to #2.
+> % \pageref will return the page and link to #2.
+> % \getrefbykeydefault{#1}{name}{Doc-Start} returns the page anchor.
+> 
+> % its corresponding referencing method
+> \newcommand{\pagelink}[2]% #1=label, #2=text
+> {\hyperlink{\getrefbykeydefault{#1}{name}{Doc-Start}}{#2}}
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> \begin{document}
+> 
+> Following link will go to top of \hyperlink{page.3}{page 3}.
+> 
+> I want \hyperlink{mytarget1}{this link} to also go to top of page 3, because ``mytarget1'' is located on this page.
+> 
+> And \hyperlink{mytarget2}{this one} to top of page 4, because ``mytarget2'' is located on this page.
+> 
+> \lipsum[1-15]
+> 
+> \pagetarget{mytarget1}{mytarget1} is on this page
+> 
+> \lipsum[5]
+> 
+> \pagetarget{mytarget2}{mytarget2} is on this page
+> 
+> \end{document}
+> ```
 >
->   ```latex
->   % dependency in preamble
->   \usepackage{hyperref}
->   \hypersetup{
->       colorlinks=true,
->       linkcolor=blue,
->       filecolor=magenta,      
->       urlcolor=cyan,
->   }
->   % By default, URLs are printed using mono-spaced fonts. 
->   \urlstyle{same}
->   
->   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
->   % in document
->   \hyperlink{referecing label}{conetent}
->   ```
+> 
+
+#### Reference Style
+
+> - Change the clickable reference's style
+>
+> ```latex
+> % dependency in preamble
+> \usepackage{hyperref}
+> \hypersetup{
+>     colorlinks=true,
+>     linkcolor=blue,
+>     filecolor=magenta,      
+>     urlcolor=cyan,
+> }
+> % By default, URLs are printed using mono-spaced fonts. 
+> \urlstyle{same}
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> % in document
+> \hyperlink{referecing label}{conetent}
+> ```
 
 ### Font Style
 
