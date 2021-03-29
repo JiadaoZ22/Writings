@@ -98,6 +98,8 @@
 
 #### *Better Jumping Logic
 
+> - Normally, the `\ref` or `\hyperlink` or any jumping method would always put the jumping label to the top of view that causing seriously display issue.
+>
 > ```latex
 > \documentclass{book}
 > \usepackage{lipsum}
