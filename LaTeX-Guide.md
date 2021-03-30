@@ -134,7 +134,7 @@
 > 
 > %
 > \renewcommand{\eqref}[1]% #1=label
-> {\hyperlink{\getrefbykeydefault{#1}{name}{Doc-Start}}{Eq.\ref{#1}}}
+> {\hyperlink{\getrefbykeydefault{#1}{name}{Doc-Start}}{Eq.\getrefnumber{#1}}}
 > 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > 
@@ -159,6 +159,39 @@
 >
 > 
 
+#### Columns
+
+> - Sometimes, especially for `Beamer`, you may want **columns** instead of **wrap figure**.
+>
+> ```latex
+> \documentclass{beamer}
+> \usetheme{Rochester}
+> \begin{document}
+> 
+> \begin{frame}[t]
+> \begin{block}{ROC-Curve}
+> \begin{columns}[T]
+> \begin{column}{0.33\linewidth}
+> ~\includegraphics[height=0.3\textheight,keepaspectratio]{example-image-duck}
+> \end{column}
+> \begin{column}{0.6\linewidth}
+>     True Positives-Rate (TPR) = $\frac{TP}{TP + FN}$
+> 
+>     False Positives-Rate(FPR) = $\frac{FP}{TP + TN}$
+> 
+>     An ROC-Curve plots TPR vs FPR at different classification thresholds.
+>     Adjusting the classification threshold leads therefore to a change in
+>     both TPR and FPR. 
+> \end{column}
+> \end{columns}
+> \end{block}
+> 
+> \end{frame}
+> \end{document}
+> ```
+>
+> ![enter image description here](LaTeX-Guide.assets/My8ED.png)
+
 #### Reference Style
 
 > - Change the clickable reference's style
@@ -179,6 +212,8 @@
 > % in document
 > \hyperlink{referecing label}{conetent}
 > ```
+
+
 
 ### Font Style
 
