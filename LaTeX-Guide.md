@@ -1,5 +1,137 @@
 # LaTeX-Guide
 
+## My Beamer Style for <u>*preamble.tex*</u>
+
+> ```latex
+> %
+> % See the README.md for usage instructions. This style really only has one
+> % option: When called with the "altlogo" option, it will use the "Purdue
+> % University" logo instead of the "Purdue Engineering" logo.
+> % we want serif math fonts, they look better
+> 
+> 
+> 
+> % this package is for text alignment
+> \usepackage{ragged2e}
+> 
+> % load required packages. I prefer IEEEtran for equations, but that's a
+> % personal preference.
+> \usepackage{IEEEtrantools}
+> \usepackage{csquotes}
+> % the citation style follows the requirement of 2020 NIPS
+> \usepackage[natbib=true, bibstyle=authoryear-icomp, citestyle=authoryear-icomp, maxbibnames=99]{biblatex}
+> % \usepackage[style=verbose-ibid, backend=bibtex]{biblatex}
+> \bibliography{0_citations.bib}
+> \renewcommand{\footnotesize}{\tiny}
+> 
+> %% self made citation
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> \DeclareCiteCommand{\printcite}
+>   {\boolfalse{citetracker}%
+>   \boolfalse{pagetracker}%
+>   \usebibmacro{prenote}}
+>   {\ifciteindex
+>      {\indexnames{labelname}%
+>       \indexfield{indextitle}}
+>      {}%
+>   \printtext[bibhyperref]{%
+>       \printnames{labelname}%
+>       \setunit{\labelnamepunct}%
+>       \printfield[citetitle]{labeltitle}%
+>       \newunit
+>       \printfield{year}%
+>      }%
+>   }
+>   {\multicitedelim}
+>   {\usebibmacro{postnote}}
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> \usepackage{pgf}  % PGF/TikZ is needed for nice plots
+> 
+> \usepackage[cmex10]{mathtools} % for math equations
+> \usepackage{amssymb}
+> \usepackage{bm}
+> \usepackage{wrapfig}
+> 
+> 
+> % theorems - can use \begin{IEEEproof} as alternative to \begin{proof}
+> \usepackage{amsthm}
+> \renewcommand{\qedsymbol}{$\blacksquare$} % want a black square for proofs
+> 
+> % useful to set this when using Inkscape SVG figures
+> \graphicspath{{./graphics/}}
+> 
+> % tell beamer to use the purdue-gold theme
+> % \usetheme[altlogo]{purduegold}
+> \usetheme{purduegold}
+> 
+> % Justifying paragraphs to be same wide Allow optional arguments after frame.
+> \apptocmd{\frame}{}{\justifying}{} 
+> % justifying itemize
+> \let\olditem\item
+> \renewcommand\item{\olditem\justifying}
+> \setlength{\parindent}{0ex} 
+> 
+> % redefine style for \emph{}
+> \setbeamercolor{emph}{fg=red}
+> \renewcommand<>{\emph}[1]{%
+>   {\usebeamercolor[fg]{emph}\only#2{\itshape}#1}%
+> }
+> % \makeatletter
+> % \DeclareRobustCommand{\em}{%
+> %   \@nomath\em \if b\expandafter\@car\f@series\@nil
+> %   \normalfont \else \bfseries \fi}
+> % \makeatother
+> 
+> \usepackage{hyperref}
+> \usepackage[all]{hypcap}        % needed to help hyperlinks direct correctly;
+> \hypersetup{
+>     colorlinks=true,
+>     linkcolor=blue,
+>     filecolor=magenta,      
+>     urlcolor=cyan,
+> }
+> 
+> % self made command for better jumping display
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> % for those referring label you don't need some "text" for it, you may use \label directly instead
+> % \label
+> 
+> \makeatletter
+> \newcommand{\pagetarget}[2]% #1=label (both hypertarget and label), #2=text
+> {\hypertarget{#1}{#2}\protected@write\@auxout{}{%
+>    \string\newlabel{#1}{{#2}{\thepage}{page.\thepage}{#1}{}}}}
+> \makeatother
+> 
+> % \hyperlink{#1}{button} will link to #2.
+> % \pagelink{#1}{button} will link to the page anchor.
+> % \ref{#1} will return #2 and link to #2.
+> % \pageref will return the page and link to #2.
+> % \getrefbykeydefault{#1}{name}{Doc-Start} returns the page anchor.
+> % \textlink returns the #2 and link to page anchor
+> % \eqref returns the equation index and link to page anchor
+> 
+> %
+> \newcommand{\pagelink}[2]% #1=label, #2=text
+> {\hyperlink{\getrefbykeydefault{#1}{name}{Doc-Start}}{#2}}
+> 
+> % 
+> \newcommand{\textlink}[1]% #1=label
+> {\hyperlink{\getrefbykeydefault{#1}{name}{Doc-Start}}{\getrefnumber{#1}}}
+> 
+> %
+> \renewcommand{\eqref}[1]% #1=label
+> {\hyperlink{\getrefbykeydefault{#1}{name}{Doc-Start}}{Eq.\getrefnumber{#1}}}
+> 
+> % Bell for l
+> \newcommand*\Bell{\ensuremath{\boldsymbol\ell}}
+> 
+> % include subsection index along with equation's index
+> \numberwithin{equation}{subsection}
+> ```
+>
+> 
+
 ## NIPS Citation
 
 > - Create a file named "preamble.tex" which contains style design.
