@@ -436,21 +436,50 @@
 >
 > <img src="LaTeX-Guide.assets/image-20200327011340288.png" alt="image-20200327011340288" style="zoom: 67%;" />
 
+> **Bold line**
+>
+> ```latex
+> % you gonna use those two packages
+> \usepackage{boldline}
+> \usepackage{array}
+> 
+> % content
+> \begin{center}\small
+>          \begin{tabular}[c]{| m{6em} | m{17em} | m{6em} |} 
+>          \hline
+>         Variable & Description & Dimension \\ [0.5ex] 
+>          \hlineB{2}
+>          input\_h & The wireless channel gain between WDs and the AP $\mathbf{h}$ & (#samples,#WDs) \\ 
+>          \hline
+>         output\_mode & The optimal binary offloading action $\mathbf{x}^*$ & (#samples,#WDs) \\
+>          \hline
+>          output\_a & The optimal fraction of time that the AP broadcasts RF energy for all WDs to harvest $a^*$ & (#samples,1) \\
+>          \hline
+>          output\_tau & The optimal fraction of time allocated to WDs for task offloading $\mathbf{\tau}^*$ & (#samples,#WDs) \\
+>          \hline
+>         output\_obj & The optimal weighted sum computation rate $Q^*$ & (#samples,1) \\ [1ex] 
+>         \hline
+>         \end{tabular}
+>     \end{center}
+> ```
+>
+> <img src="LaTeX-Guide.assets/image-20210407105809150.png" alt="image-20210407105809150" style="zoom:50%;" />
+
 ### Figure
 
 > ```latex
 > \begin{figure}
->     \centering
->     \begin{minipage}{0.48\textwidth}
->         \includegraphics[width=0.95\linewidth]{figures/ContinuousSegmentAccuracy}
->         \caption{Segmentation and recognition accuracy of the continuous hand gesture recognition algorithm on the Moto dataset. Sub1 means human subject one}
->         \label{fig:ContinuousSegmentAccuracy}
->     \end{minipage}
->     \begin{minipage}{0.48\textwidth}
->         \includegraphics[width=0.9\linewidth]{figures/ContinuousSegmentAccuracy_UG}
->         \caption{Segmentation and recognition accuracy of the continuous hand gesture recognition algorithm on the UG dataset. Sub1 means human subject one}
->         \label{fig:ContinuousSegmentAccuracy_UG}
->     \end{minipage}
+>  \centering
+>  \begin{minipage}{0.48\textwidth}
+>      \includegraphics[width=0.95\linewidth]{figures/ContinuousSegmentAccuracy}
+>      \caption{Segmentation and recognition accuracy of the continuous hand gesture recognition algorithm on the Moto dataset. Sub1 means human subject one}
+>      \label{fig:ContinuousSegmentAccuracy}
+>  \end{minipage}
+>  \begin{minipage}{0.48\textwidth}
+>      \includegraphics[width=0.9\linewidth]{figures/ContinuousSegmentAccuracy_UG}
+>      \caption{Segmentation and recognition accuracy of the continuous hand gesture recognition algorithm on the UG dataset. Sub1 means human subject one}
+>      \label{fig:ContinuousSegmentAccuracy_UG}
+>  \end{minipage}
 > \end{figure}
 > ```
 >
