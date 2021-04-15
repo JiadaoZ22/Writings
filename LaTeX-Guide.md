@@ -536,6 +536,16 @@
 >
 > <img src="LaTeX-Guide.assets/image-20201213013808909.png" alt="image-20201213013808909" style="zoom: 50%;" />
 
+## Appendix
+
+> - naive
+>
+> ```latex
+> na\"ive
+> ```
+>
+> 
+
 ## OneNote
 
 > Holding **`control - +`** together then you could type in math model
