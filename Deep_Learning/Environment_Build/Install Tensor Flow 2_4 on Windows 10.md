@@ -70,7 +70,8 @@
 >    ```python
 >    from __future__ import absolute_import, division, print_function, unicode_literals
 >    import tensorflow as tf
->    print("GPU Available: ", tf.test.is_gpu_available())
+>    # print("GPU Available: ", tf.test.is_gpu_available())
+	 tf.config.list_physical_devices('GPU')
 >    ```
 >
 > -  All set, if return `True`

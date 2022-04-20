@@ -12,6 +12,7 @@
 >   - The experimental results demonstrate that **modality fusion** (fusion: merging/combining) with multimodal deep neural networks can significantly enhance the performance compared with a single modality。
 > - SoTA == **State of The Art**
 > - **Ablation** analysis: evaluate by removing components
+> - Answer12
 
 ## Substituation
 
